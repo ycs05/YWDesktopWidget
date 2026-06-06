@@ -1,0 +1,28 @@
+﻿<Window x:Class="BuiltWidgitTime"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YWDesktopWidgit"
+        mc:Ignorable="d"
+        Title="Time" Height="144" Width="144" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False" ResizeMode="NoResize" Background="Transparent">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="144" Stroke="Black" VerticalAlignment="Center" Width="144" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#7F00FF00"/>
+                    <GradientStop Color="#7F00FFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="Title" Content="时间" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC Black"/>
+        <Label x:Name="Time" Content="08 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Noto Sans SC Black" FontSize="36">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    </Grid>
+</Window>

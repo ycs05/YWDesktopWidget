@@ -1,0 +1,27 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YWDesktopWidgit"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        Title="YW Desktop Widgit" Height="450" Width="800" ResizeMode="NoResize">
+
+    <Grid>
+
+        <Rectangle HorizontalAlignment="Center" Height="419" Stroke="Black" VerticalAlignment="Top" Width="790" Fill="#B28764FF"/>
+        <Label Content="欢迎使用 YW Desktop Widgit！" HorizontalAlignment="Center" Margin="0,55,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontSize="36" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Center" Height="32" Stroke="Black" VerticalAlignment="Top" Width="790" Fill="Black" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+        <Label Content="YW Desktop Widgit 主程序" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold" Background="{x:Null}" Foreground="White"/>
+        <Button Content="x" HorizontalAlignment="Left" Margin="770,8,0,0" VerticalAlignment="Top" FontFamily="Wingdings" Click="Button_Click"/>
+        <Label Content="这是一个桌面组件小程序，您可以订阅一个组件，然后将它放到您的桌面上。" HorizontalAlignment="Center" Margin="0,122,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC"/>
+        <Rectangle HorizontalAlignment="Center" Height="257" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="780" Fill="White"/>
+        <Label Content="🧩组件列表" HorizontalAlignment="Left" Margin="33,168,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold"/>
+        <Button x:Name="BuiltWidgitTimeAddButton" Content="➕添加" HorizontalAlignment="Left" Margin="40,259,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold" Click="ShowTimeWidgit"/>
+
+
+    </Grid>
+</Window>
