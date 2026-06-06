@@ -16,7 +16,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label x:Name="Title" Content="时间" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC Black"/>
-        <Label x:Name="Time" Content="08 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Noto Sans SC Black" FontSize="36">
+        <Label x:Name="Time" Content="获取中" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Noto Sans SC Black" FontSize="36">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="1"/>

@@ -21,6 +21,7 @@
         <Rectangle HorizontalAlignment="Center" Height="257" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="780" Fill="White"/>
         <Label Content="🧩组件列表" HorizontalAlignment="Left" Margin="33,168,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold"/>
         <Button x:Name="BuiltWidgitTimeAddButton" Content="➕添加" HorizontalAlignment="Left" Margin="40,259,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold" Click="ShowTimeWidgit"/>
+        <Label Content="时间" HorizontalAlignment="Left" Margin="45,237,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC"/>
 
 
     </Grid>

@@ -15,7 +15,7 @@ Class MainWindow
         trayMenu.Items.Add("显示窗口", Nothing, AddressOf ShowWin)
         trayMenu.Items.Add("退出程序", Nothing, AddressOf ExitProg)
         trayIcon.Icon = SystemIcons.Application
-        trayIcon.Text = "桌面小组件"
+        trayIcon.Text = "YW Desktop Widgit"
         trayIcon.ContextMenuStrip = trayMenu
         AddHandler trayIcon.MouseDoubleClick, AddressOf DoubleClickTray
     End Sub
