@@ -16,4 +16,8 @@ Class BuiltWidgetTime
     Private Sub UpdateNowTime(sender As Object, e As EventArgs)
         Time.Content = DateTime.Now.ToString("HH:mm")
     End Sub
+    Private Sub Cloce_Click(sender As Object, e As RoutedEventArgs)
+        _timer.Stop()
+        Me.Close()
+    End Sub
 End Class

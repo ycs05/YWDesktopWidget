@@ -14,7 +14,7 @@ Class MainWindow
         InitializeComponent()
         trayMenu.Items.Add("显示窗口", Nothing, AddressOf ShowWin)
         trayMenu.Items.Add("退出程序", Nothing, AddressOf ExitProg)
-        trayIcon.Icon = SystemIcons.Application
+        trayIcon.Icon = New Icon("Logo.ico")
         trayIcon.Text = "YW Desktop Widget"
         trayIcon.ContextMenuStrip = trayMenu
         AddHandler trayIcon.MouseDoubleClick, AddressOf DoubleClickTray

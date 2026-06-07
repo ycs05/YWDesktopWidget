@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="Time" Height="144" Width="144" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False" ResizeMode="NoResize" Background="Transparent">
     <Grid>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem x:Name="CloseMenuItem" Header="关闭" Click="Cloce_Click"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
         <Rectangle HorizontalAlignment="Center" Height="144" Stroke="Black" VerticalAlignment="Center" Width="144" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
