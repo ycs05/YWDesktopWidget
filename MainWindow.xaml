@@ -21,11 +21,17 @@
         <Rectangle HorizontalAlignment="Center" Height="257" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="780" Fill="White"/>
         <Label Content="🧩组件列表" HorizontalAlignment="Left" Margin="33,168,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold"/>
         <Button x:Name="BuiltWidgetTimeAddButton" Content="➕添加" HorizontalAlignment="Left" Margin="40,259,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold" Click="ShowTimeWidget"/>
-        <Label Content="时间" HorizontalAlignment="Left" Margin="45,237,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC"/>
+        <Label Content="时间" HorizontalAlignment="Left" Margin="45,237,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="48" Margin="38,195,0,0" VerticalAlignment="Top" Width="48" Source="/Time.bmp"/>
         <Image HorizontalAlignment="Left" Height="16" Margin="10,10,0,0" VerticalAlignment="Top" Width="16" Source="/Logo.png"/>
         <Button x:Name="ExitButton"  Content="关闭程序" HorizontalAlignment="Left" Height="18" Margin="734,422,0,0" VerticalAlignment="Top" Width="56" Click="ExitButton_Click" FontFamily="Noto Sans SC" FontSize="10"/>
-
+        <Label Content="Tool By ycs05" HorizontalAlignment="Left" Margin="10,413,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC"/>
+        <TextBlock HorizontalAlignment="Left" Margin="95,418,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC">
+            (<Hyperlink NavigateUri="https://github.com/ycs05" RequestNavigate="Hyperlink_RequestNavigate">GitHub</Hyperlink> | <Hyperlink NavigateUri="https://github.com/ycs05/YWDesktopWidget" RequestNavigate="Hyperlink_RequestNavigate">查看项目源代码</Hyperlink>)
+        </TextBlock>
+        <Button x:Name="BuiltWidgetWeatherAddButton" Content="➕添加" HorizontalAlignment="Left" Margin="137,259,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold" Click="BuiltWidgetWeatherAddButton_Click"/>
+        <Label Content="天气" HorizontalAlignment="Left" Margin="142,237,0,0" VerticalAlignment="Top" FontFamily="Noto Sans SC" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="48" Margin="135,195,0,0" VerticalAlignment="Top" Width="48" Source="/Weather.bmp"/>
 
     </Grid>
 </Window>

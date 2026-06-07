@@ -11,10 +11,10 @@ Imports System.Windows
 
 '查看程序集特性的值
 
-<Assembly: AssemblyTitle("YWDesktopWidgit")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("YW Desktop Widget")>
+<Assembly: AssemblyDescription("A desktop widget app.")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("YWDesktopWidgit")>
+<Assembly: AssemblyProduct("YW Desktop Widget")>
 <Assembly: AssemblyCopyright("Copyright ©  2026")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: ComVisible(false)>
@@ -53,4 +53,5 @@ Imports System.Windows
 '
 
 <Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.1")>
+<Assembly: NeutralResourcesLanguage("zh-CN")>

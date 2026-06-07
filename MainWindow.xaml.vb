@@ -48,4 +48,13 @@ Class MainWindow
     Private Sub ExitButton_Click(sender As Object, e As RoutedEventArgs)
         Application.Current.Shutdown()
     End Sub
+    Private Sub Hyperlink_RequestNavigate(sender As Object, e As RequestNavigateEventArgs)
+        Process.Start(New ProcessStartInfo(e.Uri.AbsoluteUri) With {.UseShellExecute = True})
+        e.Handled = True
+    End Sub
+
+    Private Sub BuiltWidgetWeatherAddButton_Click(sender As Object, e As RoutedEventArgs)
+        Dim weatherwidget As New BuiltWidgetWeather()
+        weatherwidget.Show()
+    End Sub
 End Class
