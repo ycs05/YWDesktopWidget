@@ -1,6 +1,7 @@
 ﻿Imports System.Windows.Threading
 
 Class BuiltWidgetTime
+    Private t = "HH:mm"
     Private ReadOnly _timer As New DispatcherTimer()
 
     Public Sub New()
@@ -18,7 +19,7 @@ Class BuiltWidgetTime
     End Sub
 
     Private Sub UpdateNowTime(sender As Object, e As EventArgs)
-        Time.Content = DateTime.Now.ToString("HH:mm")
+        Time.Content = DateTime.Now.ToString(t)
     End Sub
 
     Private Sub Cloce_Click(sender As Object, e As RoutedEventArgs)
@@ -29,5 +30,15 @@ Class BuiltWidgetTime
         _timer.Stop()
         RemoveHandler _timer.Tick, AddressOf UpdateNowTime
         RemoveHandler Me.Unloaded, AddressOf Widget_Unloaded
+    End Sub
+
+    Private Sub HMSMenuItem_Click(sender As Object, e As RoutedEventArgs)
+        Time.FontSize = 24
+        t = "HH:mm:ss"
+    End Sub
+
+    Private Sub HMMenuItem_Click(sender As Object, e As RoutedEventArgs)
+        Time.FontSize = 36
+        t = "HH:mm"
     End Sub
 End Class

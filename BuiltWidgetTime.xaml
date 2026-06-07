@@ -9,6 +9,8 @@
     <Grid>
         <Grid.ContextMenu>
             <ContextMenu>
+                <MenuItem x:Name="HMSMenuItem" Header="切换为时分秒形式（可能不准确）" Click="HMSMenuItem_Click"/>
+                <MenuItem x:Name="HMMenuItem" Header="切换为时分形式" Click="HMMenuItem_Click"/>
                 <MenuItem x:Name="CloseMenuItem" Header="关闭" Click="Cloce_Click"/>
             </ContextMenu>
         </Grid.ContextMenu>
