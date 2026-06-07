@@ -1,9 +1,11 @@
 ﻿Imports System.Drawing
 Imports System.Windows.Forms
+Imports System.Diagnostics
 
 Class MainWindow
     Private trayIcon As New NotifyIcon()
     Private trayMenu As New ContextMenuStrip()
+
     Private Sub Rectangle_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs)
         If e.ButtonState = MouseButtonState.Pressed Then
             Me.DragMove()
@@ -18,6 +20,7 @@ Class MainWindow
         trayIcon.Text = "YW Desktop Widget"
         trayIcon.ContextMenuStrip = trayMenu
         AddHandler trayIcon.MouseDoubleClick, AddressOf DoubleClickTray
+        AddHandler Me.Closed, AddressOf MainWindow_Closed
     End Sub
 
     Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
@@ -40,6 +43,7 @@ Class MainWindow
         trayIcon.Visible = False
         Application.Current.Shutdown()
     End Sub
+
     Private Sub ShowTimeWidget(sender As Object, e As RoutedEventArgs)
         Dim timewidget As New BuiltWidgetTime()
         timewidget.Show()
@@ -48,6 +52,7 @@ Class MainWindow
     Private Sub ExitButton_Click(sender As Object, e As RoutedEventArgs)
         Application.Current.Shutdown()
     End Sub
+
     Private Sub Hyperlink_RequestNavigate(sender As Object, e As RequestNavigateEventArgs)
         Process.Start(New ProcessStartInfo(e.Uri.AbsoluteUri) With {.UseShellExecute = True})
         e.Handled = True
@@ -56,5 +61,13 @@ Class MainWindow
     Private Sub BuiltWidgetWeatherAddButton_Click(sender As Object, e As RoutedEventArgs)
         Dim weatherwidget As New BuiltWidgetWeather()
         weatherwidget.Show()
+    End Sub
+
+    Private Sub MainWindow_Closed(sender As Object, e As EventArgs)
+        RemoveHandler trayIcon.MouseDoubleClick, AddressOf DoubleClickTray
+        RemoveHandler Me.Closed, AddressOf MainWindow_Closed
+        trayIcon.Visible = False
+        trayIcon.Dispose()
+        trayMenu.Dispose()
     End Sub
 End Class

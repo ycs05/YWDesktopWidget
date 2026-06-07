@@ -1,19 +1,24 @@
 ﻿Imports System.Net.Http
 Imports Newtonsoft.Json
 Imports System.Windows
+
 Public Class BuiltWidgetWeather
     Public Sub New()
         InitializeComponent()
         AddHandler Loaded, AddressOf BuiltWidgetWeather_Loaded
+        AddHandler Unloaded, AddressOf Widget_Unloaded
     End Sub
+
     Private Async Sub BuiltWidgetWeather_Loaded(sender As Object, e As RoutedEventArgs)
         RefreshButton_Click(Nothing, Nothing)
     End Sub
+
     Private Sub Rectangle_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs)
         If e.ButtonState = MouseButtonState.Pressed Then
             Me.DragMove()
         End If
     End Sub
+
     Private Class WeatherResponse
         Public Property province As String
         Public Property city As String
@@ -27,7 +32,9 @@ Public Class BuiltWidgetWeather
         Public Property humidity As Integer
         Public Property report_time As String
     End Class
+
     Private ReadOnly httpClient As New HttpClient()
+
     Private Async Sub RefreshButton_Click(sender As Object, e As RoutedEventArgs)
         Dim btn = TryCast(sender, System.Windows.Controls.Button)
         If btn IsNot Nothing Then btn.IsEnabled = False
@@ -53,7 +60,14 @@ Public Class BuiltWidgetWeather
             If btn IsNot Nothing Then btn.IsEnabled = True
         End Try
     End Sub
+
     Private Sub Close_Click(sender As Object, e As RoutedEventArgs)
         Me.Close()
+    End Sub
+
+    Private Sub Widget_Unloaded(sender As Object, e As RoutedEventArgs)
+        RemoveHandler Loaded, AddressOf BuiltWidgetWeather_Loaded
+        RemoveHandler Unloaded, AddressOf Widget_Unloaded
+        httpClient.Dispose()
     End Sub
 End Class
