@@ -15,7 +15,7 @@ Class MainWindow
         trayMenu.Items.Add("显示窗口", Nothing, AddressOf ShowWin)
         trayMenu.Items.Add("退出程序", Nothing, AddressOf ExitProg)
         trayIcon.Icon = SystemIcons.Application
-        trayIcon.Text = "YW Desktop Widgit"
+        trayIcon.Text = "YW Desktop Widget"
         trayIcon.ContextMenuStrip = trayMenu
         AddHandler trayIcon.MouseDoubleClick, AddressOf DoubleClickTray
     End Sub
@@ -40,8 +40,8 @@ Class MainWindow
         trayIcon.Visible = False
         Application.Current.Shutdown()
     End Sub
-    Private Sub ShowTimeWidgit(sender As Object, e As RoutedEventArgs)
-        Dim timewidgit As New BuiltWidgitTime()
-        timewidgit.Show()
+    Private Sub ShowTimeWidget(sender As Object, e As RoutedEventArgs)
+        Dim timewidget As New BuiltWidgetTime()
+        timewidget.Show()
     End Sub
 End Class

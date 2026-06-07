@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Threading
 
-Class BuiltWidgitTime
+Class BuiltWidgetTime
     Private Sub Rectangle_MouseLeftButtonDown(sender As Object, e As MouseButtonEventArgs)
         If e.ButtonState = MouseButtonState.Pressed Then
             Me.DragMove()
