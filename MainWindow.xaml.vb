@@ -44,4 +44,8 @@ Class MainWindow
         Dim timewidget As New BuiltWidgetTime()
         timewidget.Show()
     End Sub
+
+    Private Sub ExitButton_Click(sender As Object, e As RoutedEventArgs)
+        Application.Current.Shutdown()
+    End Sub
 End Class
